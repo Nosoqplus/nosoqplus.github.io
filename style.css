@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'HardPixel';
+    src: url(/font/Hardpixel-nn51.otf);
+}
+
+
+*::after, *::before, *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'HardPixel';
+    
+    image-rendering: pixelated;
+    min-width: 100vw;
+    min-height: 100vh;
+
+    position: relative;
+}
+
+img{
+    width: 100%;
+}
+
+div{
+    width: 100%;
+}
+
+/* CANVAS */
+.canvas-container{
+    width: 100vw;
+    height: 100vh;
+    flex: 1 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+
+    transition: background-color 3s linear;
+}
+
+.canvas-container.battle{
+    background-color: black;
+}
+
+canvas{
+    image-rendering: pixelated;
+    flex-shrink: 0;
+
+    /* width: 70%; */
+    aspect-ratio: 1 / 1;
+    height: 100%;
+    max-height: 100%;
+
+}
+
+
+/* DIALOG  */
+
+.dialog-container {
+    position: fixed;
+    top: 0;
+    
+    background-color: black;
+    width: 100%;
+    max-width: 1600px;
+    height: 300px;
+    border-bottom: 3px solid white;
+    left: 50%;
+    transform: translate(-50%);
+
+    z-index: 500;
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    display: none;
+}   
+
+.dialog-container::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 3px solid white;
+    border-radius: 15px;
+
+    z-index: 1000;
+}
+
+.dialog-text {
+    font-size: 50px;
+    color: white;
+
+    text-align: center;
+
+    height: 100%;
+    width: 100%;
+}
+
+.dialog-face{
+    width: auto;
+    height: 90%;
+    filter: sepia(1), grayscale(1);
+    image-rendering: pixelated;
+
+    user-select: none;
+}
+
+
+/* INTERFACE */
+.game-interface {
+    width: 100%;
+    
+    position: absolute;
+    bottom: 0;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-interface.battle {
+    position: absolute;
+    bottom: 0;
+
+    color: white;
+}
+
+.state{
+    font-size: 50px;
+}
+
+.hp, .lvl, .morals{
+    font-size: 40px;
+}
+
+.game-interface-button{
+    cursor: pointer;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 60px;
+    border: none;
+
+    margin-right: 20px;
+}
+
+.action-menu{
+    position: absolute;
+    bottom: 100%;
+    max-height: 40%;
+    height: 100%;
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.actions{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.action-button{
+    background: none;
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: 30px;
+    cursor: pointer;
+}

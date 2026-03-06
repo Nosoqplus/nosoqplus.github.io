@@ -581,7 +581,8 @@ enterenceLeft: new Map(window.tiles.enterenceLeft,
         
         arsen: new Interactable(30, 12, () => {
             window.addPhraseToQueue('АРСЕН МАКАРОН???', 'larry');
-            window.addPhraseToQueue('Привет, Ларри', 'arsen');
+            window.addPhraseToQueue('Привет, Ларри. Я опять сказал какую-то хуйню в сети, поэтому меня пытаются посадить на бутылку.', 'arsen');
+            window.addPhraseToQueue('Так что времени мало...', 'arsen');
             window.addPhraseToQueue('Хочешь послушать про то, как нужно общаться с женщинами?', 'arsen');
             window.addPhraseToQueue('КОНЕЧНО!!!!', 'larry');
             window.addPhraseToQueue('В общем, такое дело...', 'arsen');
@@ -595,7 +596,7 @@ enterenceLeft: new Map(window.tiles.enterenceLeft,
             window.addPhraseToQueue('По этому нужно фармить ауру.', 'arsen');
             window.addPhraseToQueue('Будь крутым: матерись, употребляй, пристрастись к нюханию клея.', 'arsen');
             window.addPhraseToQueue('Все в твоих руках, забавный кошкомальчик.', 'arsen');
-            window.addPhraseToQueue('На этом мои полномочия все. Прощай.', 'arsen');
+            window.addPhraseToQueue('На этом мои полномочия все. АУЕ!', 'arsen');
             window.addPhraseToQueue('СПАСИБО, АРСЕН МАКАРОН', 'larry');
             window.addPhraseToQueue('', '', ()=> {
                 window.maps.forest4.onUpdate = () => {};
